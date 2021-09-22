@@ -47,14 +47,13 @@ export const getArchiveListService = async (): Promise<ArchiveType[]> => {
     const endMonth = getEndOfMonthLogic(targetDate) // 対象月の月末日付取得
 
     // 対象の年月に投稿した記事があるか判定
-   /* if (await isBlogsArchivesService(startMonth, endMonth)) {
+    if (await isBlogsArchivesService(startMonth, endMonth)) {
       archiveList.push({
         originDate: changeYearMonthDateLogic(startMonth),
         linkDate: changeYearMonthLogic(startMonth),
         showDate: changeShowYearMonthLogic(startMonth),
       })
     }
-      */
   }
 
   return archiveList
